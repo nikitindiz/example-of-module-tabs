@@ -1,26 +1,63 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import ModuleTabs from './components/ModuleTabs';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+
+
+    // const result = <ModuleTabs titles={ [ 'First', 'Second', 'Last' ] } />;
+
+
+    // const result = new ModuleTabs({ title: [ 'First', 'Second', 'Last' ] })
+    
+
+    return (
+      <div>
+          <h1>
+            Example of module tabs
+          </h1>
+
+          <ModuleTabs titles={ [ 'First', 'Second', 'Last' ] }  children={[ 'First page', 'Second page', 'Third page' ]}/>
+
+          <ModuleTabs titles={ [ 'First', 'Second', 'Last' ] }>
+            <div>
+              Ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore quasi voluptatibus quo eum in illum pariatur doloremque maiores 
+              nihil id quos deserunt reprehenderit quia velit autem vero, inventore consectetur assumenda.
+            </div>
+
+            <div style={ { backgroundColor: 'red' } }>
+              Sit, amet consectetur adipisicing elit.
+              Labore quasi voluptatibus quo eum in illum pariatur doloremque maiores 
+              nihil id quos deserunt reprehenderit quia velit autem vero, inventore consectetur assumenda.
+            </div>
+
+            <div>
+              Amet consectetur adipisicing elit.
+              Labore quasi voluptatibus quo eum in illum pariatur doloremque maiores 
+              nihil id quos deserunt reprehenderit quia velit autem vero, inventore consectetur assumenda.
+            </div>
+          </ModuleTabs>
+
+          <ModuleTabs>
+            <div>
+              Ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore quasi voluptatibus quo eum in illum pariatur doloremque maiores 
+              nihil id quos deserunt reprehenderit quia velit autem vero, inventore consectetur assumenda.
+            </div>
+
+            <div>
+              Sit, amet consectetur adipisicing elit.
+              Labore quasi voluptatibus quo eum in illum pariatur doloremque maiores 
+              nihil id quos deserunt reprehenderit quia velit autem vero, inventore consectetur assumenda.
+            </div>
+          </ModuleTabs>
+      </div>
+    );
+  }
 }
 
 export default App;

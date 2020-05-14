@@ -1,0 +1,25 @@
+.module-tabs {
+    margin: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.module-tabs__toolbar {
+    display: flex;
+}
+
+.module-tabs__toolbar a,
+.module-tabs__toolbar span {
+    display: block;
+    padding: 5px;
+}
+
+.module-tabs__toolbar span {
+    background-color: rgb(168, 168, 168);
+    padding: 5px;
+}
+
+.module-tabs__content {
+    padding: 5px;
+    background-color: rgb(168, 168, 168);
+}
